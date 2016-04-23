@@ -4,8 +4,9 @@ This is the course project for the Getting and Cleaning Data Coursera course.
 The R script, `run_analysis.R`, performs the following actions:
 
 ##### 1. Preparation
-  1. Downloads the dataset if it does not already exist in the working directory.
-  2. Unzips the original file
+  1. Loads the required libraries
+  2. Downloads the dataset if it does not already exist in the working directory.
+  3. Unzips the original file
 
 
 ##### 2. Global activity and feature list loading
