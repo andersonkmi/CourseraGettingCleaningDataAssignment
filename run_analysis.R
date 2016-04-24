@@ -35,7 +35,7 @@ train_dataset <- data.table(read.table(file = "UCI HAR Dataset/train/X_train.txt
 colnames(train_dataset) <- c(feature_names)
 bound_training_dataset <- cbind(train_subjects, train_activities, train_dataset)
 colnames(bound_training_dataset) <- c("subject", "activity", feature_names)
-resulting_train_dataset <- select(bound_training_dataset, contains("subject"), contains("activity"), contains("Mean"), contains("StdDev"))
+resulting_training_dataset <- select(bound_training_dataset, contains("subject"), contains("activity"), contains("Mean"), contains("StdDev"))
 
 ###################################
 ### Test data set loading
@@ -47,3 +47,8 @@ colnames(test_dataset) <- c(feature_names)
 bound_test_dataset <- cbind(test_subjects, test_activities, test_dataset)
 colnames(bound_test_dataset) <- c("subject", "activity", feature_names)
 resulting_test_dataset <- select(bound_test_dataset, contains("subject"), contains("activity"), contains("Mean"), contains("StdDev"))
+
+###########################################
+### Merge the training and test data sets
+###########################################
+mergedDataSets <- rbind(resulting_training_dataset, resulting_test_dataset)
