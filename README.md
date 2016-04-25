@@ -30,8 +30,7 @@ The R script, `run_analysis.R`, performs the following actions:
 
 ##### 5. Training and test data sets merge
   1. Merges the two data sets into one.
-  2. Adjusts the subject and activity column names.
-
+  
 
 ##### 6. Subject and activity row values factor transformation
   1. Converts the subject column values to factor.
